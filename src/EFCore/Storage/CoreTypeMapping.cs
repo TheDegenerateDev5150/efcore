@@ -244,7 +244,9 @@ public abstract class CoreTypeMapping
         => NonCapturingLazyInitializer.EnsureInitialized(
             ref _keyComparer,
             this,
-            static c => c.CreateDefaultComparer(favorStructuralComparisons: true));
+            static c => c.Parameters.Comparer is null
+                ? c.CreateDefaultComparer(favorStructuralComparisons: true)
+                : c.Parameters.Comparer);
 
     /// <summary>
     ///     A <see cref="ValueComparer" /> for the provider CLR type values.
