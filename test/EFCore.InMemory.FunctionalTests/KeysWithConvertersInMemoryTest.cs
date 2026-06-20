@@ -47,9 +47,11 @@ public class KeysWithConvertersInMemoryTest(KeysWithConvertersInMemoryTest.KeysW
 
     // Value converters of keys are not supported
     [Fact]
-    public override Task Can_insert_and_read_back_with_enumerable_class_key_and_optional_dependents()
-        => Assert.ThrowsAnyAsync<XunitException>(() =>
-            base.Can_insert_and_read_back_with_enumerable_class_key_and_optional_dependents());
+    public override async Task Can_insert_and_read_back_with_enumerable_class_key_and_optional_dependents()
+        => Assert.Equal(
+            CoreStrings.InvalidSetType(nameof(EnumerableClassKeyPrincipal)),
+            (await Assert.ThrowsAsync<InvalidOperationException>(
+                () => base.Can_insert_and_read_back_with_enumerable_class_key_and_optional_dependents())).Message);
 
     public class KeysWithConvertersInMemoryFixture : KeysWithConvertersFixtureBase
     {
