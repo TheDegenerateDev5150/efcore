@@ -22,7 +22,6 @@ public class ProxyGraphUpdatesInMemoryTest
             => Assert.ThrowsAnyAsync<XunitException>(() => base.Optional_one_to_one_with_AK_relationships_are_one_to_one());
 
         // Cascade delete.
-        [Theory]
         public override Task Optional_many_to_one_dependents_with_alternate_key_are_orphaned_in_store(
             CascadeTiming cascadeDeleteTiming,
             CascadeTiming deleteOrphansTiming)
@@ -30,7 +29,6 @@ public class ProxyGraphUpdatesInMemoryTest
                 base.Optional_many_to_one_dependents_with_alternate_key_are_orphaned_in_store(cascadeDeleteTiming, deleteOrphansTiming));
 
         // Cascade delete.
-        [Theory]
         public override Task Optional_many_to_one_dependents_are_orphaned_in_store(
             CascadeTiming cascadeDeleteTiming,
             CascadeTiming deleteOrphansTiming)
@@ -38,7 +36,6 @@ public class ProxyGraphUpdatesInMemoryTest
                 base.Optional_many_to_one_dependents_are_orphaned_in_store(cascadeDeleteTiming, deleteOrphansTiming));
 
         // Cascade delete.
-        [Theory]
         public override Task Required_one_to_one_are_cascade_detached_when_Added(
             CascadeTiming cascadeDeleteTiming,
             CascadeTiming deleteOrphansTiming)
@@ -56,7 +53,6 @@ public class ProxyGraphUpdatesInMemoryTest
             => Assert.ThrowsAnyAsync<XunitException>(() => base.Required_one_to_one_with_AK_relationships_are_one_to_one());
 
         // Cascade delete.
-        [Theory]
         public override Task Required_one_to_one_with_alternate_key_are_cascade_detached_when_Added(
             CascadeTiming cascadeDeleteTiming,
             CascadeTiming deleteOrphansTiming)
@@ -64,7 +60,6 @@ public class ProxyGraphUpdatesInMemoryTest
                 base.Required_one_to_one_with_alternate_key_are_cascade_detached_when_Added(cascadeDeleteTiming, deleteOrphansTiming));
 
         // Cascade delete.
-        [Theory]
         public override Task Required_one_to_one_with_alternate_key_are_cascade_deleted_in_store(
             CascadeTiming cascadeDeleteTiming,
             CascadeTiming deleteOrphansTiming)
@@ -72,7 +67,6 @@ public class ProxyGraphUpdatesInMemoryTest
                 base.Required_one_to_one_with_alternate_key_are_cascade_deleted_in_store(cascadeDeleteTiming, deleteOrphansTiming));
 
         // Cascade delete.
-        [Theory]
         public override Task Required_many_to_one_dependents_are_cascade_deleted_in_store(
             CascadeTiming cascadeDeleteTiming,
             CascadeTiming deleteOrphansTiming)
@@ -80,7 +74,6 @@ public class ProxyGraphUpdatesInMemoryTest
                 base.Required_many_to_one_dependents_are_cascade_deleted_in_store(cascadeDeleteTiming, deleteOrphansTiming));
 
         // Cascade delete.
-        [Theory]
         public override Task Required_many_to_one_dependents_with_alternate_key_are_cascade_deleted_in_store(
             CascadeTiming cascadeDeleteTiming,
             CascadeTiming deleteOrphansTiming)
@@ -89,7 +82,6 @@ public class ProxyGraphUpdatesInMemoryTest
                     cascadeDeleteTiming, deleteOrphansTiming));
 
         // Cascade delete.
-        [Theory]
         public override Task Required_non_PK_one_to_one_are_cascade_detached_when_Added(
             CascadeTiming cascadeDeleteTiming,
             CascadeTiming deleteOrphansTiming)
@@ -97,7 +89,6 @@ public class ProxyGraphUpdatesInMemoryTest
                 base.Required_non_PK_one_to_one_are_cascade_detached_when_Added(cascadeDeleteTiming, deleteOrphansTiming));
 
         // Cascade delete.
-        [Theory]
         public override Task Required_non_PK_one_to_one_with_alternate_key_are_cascade_detached_when_Added(
             CascadeTiming cascadeDeleteTiming,
             CascadeTiming deleteOrphansTiming)

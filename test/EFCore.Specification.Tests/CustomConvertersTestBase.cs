@@ -689,7 +689,7 @@ public abstract class CustomConvertersTestBase<TFixture>(TFixture fixture) : Bui
         using var context = CreateContext();
         Assert.Equal(
             "Nullable object must have a value.",
-            (await Assert.ThrowsAsync<InvalidOperationException>(async () => await context.Set<Parent>().Select(e => new { e.OwnedWithConverter.Value }).ToListAsync()))
+            (await Assert.ThrowsAsync<InvalidOperationException>(() => context.Set<Parent>().Select(e => new { e.OwnedWithConverter.Value }).ToListAsync()))
                 .Message);
     }
 

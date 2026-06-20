@@ -15,37 +15,37 @@ public class KeysWithConvertersInMemoryTest(KeysWithConvertersInMemoryTest.KeysW
         => Assert.ThrowsAnyAsync<XunitException>(() =>
             base.Can_insert_and_read_back_with_bare_class_key_and_optional_dependents());
 
-    // // Value converters of keys are not supported
+    // Value converters of keys are not supported
     [Fact]
     public override Task Can_insert_and_read_back_with_bare_class_key_and_optional_dependents_with_shadow_FK()
         => Assert.ThrowsAnyAsync<XunitException>(() =>
             base.Can_insert_and_read_back_with_bare_class_key_and_optional_dependents_with_shadow_FK());
 
-    // // Value converters of keys are not supported
+    // Value converters of keys are not supported
     [Fact]
     public override Task Can_insert_and_read_back_with_struct_binary_key_and_optional_dependents()
         => Assert.ThrowsAnyAsync<XunitException>(() =>
             base.Can_insert_and_read_back_with_struct_binary_key_and_optional_dependents());
 
-    // // Value converters of keys are not supported
+    // Value converters of keys are not supported
     [Fact]
     public override Task Can_insert_and_read_back_with_struct_binary_key_and_required_dependents()
         => Assert.ThrowsAnyAsync<XunitException>(() =>
             base.Can_insert_and_read_back_with_struct_binary_key_and_required_dependents());
 
-    // // Value converters of keys are not supported
+    // Value converters of keys are not supported
     [Fact]
     public override Task Can_query_and_update_owned_entity_with_value_converter()
         => Assert.ThrowsAnyAsync<XunitException>(() =>
             base.Can_query_and_update_owned_entity_with_value_converter());
 
-    // // Value converters of keys are not supported
+    // Value converters of keys are not supported
     [Fact]
     public override Task Can_query_and_update_owned_entity_with_int_bare_class_key()
         => Assert.ThrowsAnyAsync<XunitException>(() =>
             base.Can_query_and_update_owned_entity_with_int_bare_class_key());
 
-    // // Value converters of keys are not supported
+    // Value converters of keys are not supported
     [Fact]
     public override Task Can_insert_and_read_back_with_enumerable_class_key_and_optional_dependents()
         => Assert.ThrowsAnyAsync<XunitException>(() =>
@@ -63,7 +63,7 @@ public class KeysWithConvertersInMemoryTest(KeysWithConvertersInMemoryTest.KeysW
         {
             base.OnModelCreating(modelBuilder, context);
 
-            // // Value converters of keys are not supported
+            // Value converters of keys are not supported
             modelBuilder.Ignore<EnumerableClassKeyPrincipal>();
             modelBuilder.Ignore<EnumerableClassKeyOptionalDependent>();
             modelBuilder.Ignore<EnumerableClassKeyRequiredDependent>();

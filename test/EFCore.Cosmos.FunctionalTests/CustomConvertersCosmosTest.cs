@@ -113,7 +113,7 @@ WHERE (c["$type"] IN ("Blog", "RssBlog") AND NOT((c["IndexerVisible"] = "Aye")))
 """);
     }
 
-    // Issue#34567
+    // Issue #34567
     [Fact]
     public override Task Optional_owned_with_converter_reading_non_nullable_column()
         => Assert.ThrowsAnyAsync<XunitException>(() => base.Optional_owned_with_converter_reading_non_nullable_column());
